@@ -201,11 +201,30 @@ body {
   font-size: 1.7rem;
 }
 
-.story-photos {
-  background-color: brown;
+.story__pictures {
+  grid-column: full-start/col-end 4;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  align-items: center;
+  background-image: linear-gradient(rgba(198, 153, 99, 0.5), rgba(198, 153, 99, 0.5)), url(../img/back.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.story__img {
+  width: 100%;
+}
+.story__img--1 {
+  grid-column: 2/6;
+  grid-row: 2/span 4;
+}
+.story__img--2 {
+  grid-column: 4/-1;
+  grid-row: 3/span 4;
+  width: 115%;
 }
 .story-text {
-  background-color: coral;
+  grid-column: col-end 4/-1;
 }
 
 .section-homes {
