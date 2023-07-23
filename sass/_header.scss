@@ -8,7 +8,8 @@
     url(../img/house-3.jpeg);
   background-size: cover;
   background-position: center;
-  padding: 8rem;
+  padding: 3.5rem 8rem 8rem;
+
   gap: 1.5rem;
   display: grid;
   grid-template-rows: 1fr repeat(2, min-content) 1fr min-content;
@@ -17,6 +18,7 @@
   &__logo {
     height: 3rem;
     justify-self: center;
+    align-self: flex-start;
   }
 
   &__btn {

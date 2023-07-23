@@ -97,6 +97,7 @@ body {
 
 .sidebar {
   background-color: chocolate;
+  grid-row: 1/-1;
 }
 
 .header {
@@ -105,7 +106,7 @@ body {
   background-image: linear-gradient(rgba(16, 29, 44, 0.9), rgba(16, 29, 44, 0.9)), url(../img/house-3.jpeg);
   background-size: cover;
   background-position: center;
-  padding: 8rem;
+  padding: 3.5rem 8rem 8rem;
   gap: 1.5rem;
   display: grid;
   grid-template-rows: 1fr repeat(2, min-content) 1fr min-content;
@@ -114,6 +115,7 @@ body {
 .header__logo {
   height: 3rem;
   justify-self: center;
+  align-self: flex-start;
 }
 .header__btn {
   justify-self: start;
@@ -145,11 +147,58 @@ body {
 }
 
 .realtors {
-  background-color: plum;
+  background-color: #101d2c;
+  grid-column: col-start 7/full-end;
+  padding: 0 10vh;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  gap: 2rem;
+}
+.realtors__list {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  grid-template-rows: repeat(2, 1fr);
+  align-items: center;
+  row-gap: 5vh;
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
+}
+.realtors__img {
+  width: 7rem;
+  border-radius: 50%;
+  display: block;
+}
+.realtors__sold {
+  text-transform: uppercase;
+  color: #aaa;
+  margin-top: -3px;
 }
 
-.section-features {
-  background-color: black;
+.features {
+  grid-column: center-start/center-end;
+  display: grid;
+  padding: 15rem 0;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-gap: 6rem;
+  align-items: start;
+}
+
+.feature {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  grid-row-gap: 1.5rem;
+  grid-column-gap: 2.5rem;
+}
+.feature__icon {
+  fill: #c69963;
+  width: 4.5rem;
+  height: 4.5rem;
+  grid-row: 1/span 2;
+}
+.feature__text {
+  font-size: 1.7rem;
 }
 
 .story-photos {
