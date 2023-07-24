@@ -27,7 +27,18 @@
     }
   }
 
-  &-text {
+  &__content {
+    background-color: rgba($color-grey-dark-2, 0.1);
     grid-column: col-end 4 / -1;
+    display: grid;
+    justify-items: start;
+    align-content: center;
+    padding: 6rem 8vw;
+  }
+
+  &__text {
+    font-size: 1.5rem;
+    font-style: italic;
+    margin-bottom: 4rem;
   }
 }
